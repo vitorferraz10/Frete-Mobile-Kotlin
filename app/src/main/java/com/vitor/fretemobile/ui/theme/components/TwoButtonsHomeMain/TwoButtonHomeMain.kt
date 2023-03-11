@@ -1,18 +1,21 @@
 package com.vitor.fretemobile.ui.theme.components.TwoButtonsHomeMain
 
 import android.util.Log
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vitor.fretemobile.ui.theme.components.ButtonToModal.ButtonToModal
 
 @Composable
 fun TwoButtonsHomeMain() {
-    Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(0.dp)) {
+    Column(Modifier
+        .fillMaxWidth()
+        .height(437.333.dp),
+        )
 
+    {
         ButtonToModal(
             "Origem",
             "Escolha de onde você vai sair",
@@ -30,4 +33,10 @@ fun TwoButtonsHomeMain() {
         )
     }
 
+}
+
+@Preview
+@Composable
+fun ButtonsPreview() {
+    TwoButtonsHomeMain()
 }
