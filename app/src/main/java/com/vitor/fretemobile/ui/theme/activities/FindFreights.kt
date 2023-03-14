@@ -1,4 +1,4 @@
-package com.vitor.fretemobile
+package com.vitor.fretemobile.ui.theme.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,22 +10,19 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vitor.fretemobile.ui.theme.FreteMobileTheme
-import com.vitor.fretemobile.ui.theme.screens.Home.Home
 
-class MainActivity : ComponentActivity() {
+class FindFreightsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             FreteMobileTheme {
-                // A surface container using the 'background' color from the theme
                 Surface {
                     Column(Modifier
                         .fillMaxSize()
                         .padding(16.dp)) {
-                        Home()
+                        FindFreights()
                     }
                 }
             }
@@ -34,14 +31,6 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    FreteMobileTheme {
-        Home()
-    }
+fun FindFreights() {
+    Text(text = "Example screen")
 }

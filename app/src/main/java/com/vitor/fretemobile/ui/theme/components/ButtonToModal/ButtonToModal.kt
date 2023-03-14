@@ -20,8 +20,8 @@ import com.vitor.fretemobile.R
 
 @Composable
 fun ButtonToModal(
-    label: String,
-    textContent: String,
+    label: String = "",
+    textContent: String = "",
     handleClick: () -> Unit,
     borderTopStart: Dp = 0.dp,
     borderTopEnd: Dp = 0.dp,

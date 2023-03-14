@@ -13,7 +13,16 @@
         android:theme="@style/Theme.FreteMobile"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".FindFreights"
+            android:exported="false"
+            android:label="@string/title_activity_find_freights"
+            android:theme="@style/Theme.FreteMobile.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.theme.activities.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.FreteMobile">
@@ -27,6 +36,14 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+            android:name=".ui.theme.activities.FindFreightsActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+
     </application>
 
 </manifest>
