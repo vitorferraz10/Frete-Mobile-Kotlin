@@ -1,4 +1,4 @@
-package com.vitor.fretemobile.ui.theme.components.Header
+package com.vitor.fretemobile.ui.theme.components.home.Header
 
 
 import androidx.compose.foundation.Image
@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vitor.fretemobile.R
 
@@ -18,4 +19,10 @@ fun Header() {
             contentDescription = null,
             Modifier.size(width = 80.dp, height = 16.dp))
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HeaderPrev() {
+    Header()
 }

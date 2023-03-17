@@ -1,42 +1,40 @@
 package com.vitor.fretemobile.ui.theme.components.TwoButtonsHomeMain
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.vitor.fretemobile.ui.theme.components.ButtonToModal.ButtonToModal
 
 @Composable
-fun TwoButtonsHomeMain(navController: NavHostController) {
+fun TwoButtonsHomeMain(onNavigateToFindFreights: () -> Unit = {}) {
 
-    Column(
-        Modifier
-            .fillMaxWidth()
-            .height(437.333.dp),
-    )
+    Column(Modifier) {
 
-    {
         ButtonToModal("Origem",
             "Escolha de onde você vai sair",
-            handleClick = { navController.navigate("findFreights")},
+            handleClick = { onNavigateToFindFreights() },
             borderTopStart = 10.dp,
             borderTopEnd = 10.dp)
 
+
         ButtonToModal("Destino",
             "Escolha pra onde você vai",
-            handleClick = { navController.navigate("findFreights")},
+            handleClick = { onNavigateToFindFreights() },
             borderBottomStart = 10.dp,
             borderBottomEnd = 10.dp)
+
     }
+    
 
 }
 
 @Preview
 @Composable
 fun ButtonsPreview() {
-    val navController = rememberNavController()
-    TwoButtonsHomeMain(navController)
+        TwoButtonsHomeMain()
 }

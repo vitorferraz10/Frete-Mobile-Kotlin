@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -21,15 +20,19 @@ fun ButtonCustom(
     colorContentButton: Color,
     handleClick: () -> Unit,
 ) {
-    Button(onClick = { handleClick() },
+    Button(
+        onClick = { handleClick() },
         Modifier
             .fillMaxWidth()
             .height(48.dp)
-            .clip(shape = RoundedCornerShape(16.dp)),
+            .clip(
+                shape = RoundedCornerShape(16.dp),
+            ),
+
         colors = ButtonDefaults.buttonColors(
             backgroundColor = colorButton,
             contentColor = colorContentButton,
-            )
+        ),
 
-    ) { Text(text = textContent, style = MaterialTheme.typography.h1) }
+        ) { Text(text = textContent, style = MaterialTheme.typography.h1) }
 }
