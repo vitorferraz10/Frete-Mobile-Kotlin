@@ -9,6 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import com.vitor.fretemobile.ui.theme.FreteMobileTheme
 import com.vitor.fretemobile.ui.theme.Routes
 import com.vitor.fretemobile.ui.theme.screens.FindFreights.FindFreights
+import com.vitor.fretemobile.ui.theme.screens.FreightListing.FreightListing
 import com.vitor.fretemobile.ui.theme.screens.Home.Home
 
 class MainActivity : ComponentActivity() {
@@ -21,6 +22,7 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController, startDestination = routes.HOME) {
                     composable(routes.HOME) { Home(navController) }
                     composable(routes.FIND_FREIGHTS) { FindFreights(navController) }
+                    composable(routes.FREIGTH_LISTING) { FreightListing() }
                 }
             }
         }

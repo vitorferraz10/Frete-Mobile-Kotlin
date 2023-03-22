@@ -7,9 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="background_weak">#FFF4F4F5</color>
     <color name="text_weak">#FFBABEC9</color>
     <color name="text_subtitle_medium">#FF636B7E</color>
     <color name="neutral_border_weak">#FFDDDFE4</color>
     <color name="red_freight_main">#FFEB4847</color>
     <color name="icon_color_weak">#FFBABEC9</color>
+    <color name="chips_pink_weak">#FFFFEDED</color>s
+    <color name="color_font_chips">#FFE04747</color>
 </resources>

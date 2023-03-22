@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.vitor.fretemobile.ui.theme.Routes
 import com.vitor.fretemobile.ui.theme.components.Button.ButtonCustom
 import com.vitor.fretemobile.ui.theme.components.Container.ContainerPages
 import com.vitor.fretemobile.ui.theme.components.FindFreights.Header.HeaderFindFreights
@@ -25,8 +26,10 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun FindFreights(navController: NavHostController) {
+    val routes = Routes()
     val state = rememberModalBottomSheetState(ModalBottomSheetValue.Hidden)
     val scope = rememberCoroutineScope()
+
 
     ModalFindFreights(state = state) {
         Column() {
@@ -43,7 +46,7 @@ fun FindFreights(navController: NavHostController) {
                         textContent = "Ver Fretes disponíves",
                         colorButton = colorResource(id = com.vitor.fretemobile.R.color.red_freight_main),
                         colorContentButton = Color.White,
-                        handleClick = {}
+                        handleClick = { navController.navigate(routes.FREIGTH_LISTING) }
                     )
                 }
 
