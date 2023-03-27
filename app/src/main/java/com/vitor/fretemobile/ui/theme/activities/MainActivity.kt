@@ -7,10 +7,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.vitor.fretemobile.ui.theme.FreteMobileTheme
-import com.vitor.fretemobile.ui.theme.Routes
-import com.vitor.fretemobile.ui.theme.screens.FindFreights.FindFreights
-import com.vitor.fretemobile.ui.theme.screens.FreightListing.FreightListing
-import com.vitor.fretemobile.ui.theme.screens.Home.Home
+import com.vitor.fretemobile.ui.theme.ui.Routes
+import com.vitor.fretemobile.ui.theme.ui.screens.FindFreights.FindFreights
+import com.vitor.fretemobile.ui.theme.ui.screens.FreightListing.FreightListing
+import com.vitor.fretemobile.ui.theme.ui.screens.Home.Home
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController, startDestination = routes.HOME) {
                     composable(routes.HOME) { Home(navController) }
                     composable(routes.FIND_FREIGHTS) { FindFreights(navController) }
-                    composable(routes.FREIGTH_LISTING) { FreightListing() }
+                    composable(routes.FREIGTH_LISTING) { FreightListing(navController) }
                 }
             }
         }

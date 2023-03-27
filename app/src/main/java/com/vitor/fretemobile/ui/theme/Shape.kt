@@ -9,3 +9,11 @@ val Shapes = Shapes(
     medium = RoundedCornerShape(4.dp),
     large = RoundedCornerShape(0.dp)
 )
+
+val ShapeCard = RoundedCornerShape(
+    bottomStart = 14.dp,
+    bottomEnd = 14.dp,
+)
+val ShapeCardFreight = RoundedCornerShape(50)
+val ShapeChips = RoundedCornerShape(50)
+
